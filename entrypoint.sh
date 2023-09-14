@@ -2,7 +2,7 @@
 set -e
 
 # 用 gsutil 同步 GCS 上的 packages
-gsutil rsync gs://$BUCKET_NAME /app/packages
+gsutil rsync -r gs://$BUCKET_NAME /app/packages
 
 PORT=${PORT:-8080}
 
